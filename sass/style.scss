@@ -111,22 +111,32 @@ body {
 .tags li {
   display: inline-block;
   margin: 0 3px;
+  a {
+  text-decoration: none;
+  }
 }
-.tag-size-5{
+.tag-size-5 {
   font-size: 25px;
   color: green;
 }
+
 .tag-size-3 {
   font-size: 20px;
   color: red;
 }
+
 .tag-size-2 {
   font-size: 20px;
   color: orange;
 }
+
 .tag-size-1 {
   font-size: 15px;
   color: grey;
+}
+
+.tags li > a:active {
+  text-decoration: underline;
 }
 /* Authors */
 .authors {

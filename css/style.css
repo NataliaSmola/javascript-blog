@@ -108,6 +108,10 @@ body {
   margin: 0 3px;
 }
 
+.tags li a {
+  text-decoration: none;
+}
+
 .tag-size-5 {
   font-size: 25px;
   color: green;
@@ -126,6 +130,10 @@ body {
 .tag-size-1 {
   font-size: 15px;
   color: grey;
+}
+
+.tags li > a:active {
+  text-decoration: underline;
 }
 
 /* Authors */
