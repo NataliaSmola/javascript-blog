@@ -7,9 +7,13 @@ const opts = {
   },
 };
 
-const select = {
+const select = {   //select.all.linksTo.authors
   all: {
     articles: '.post',
+    linksTo: {
+      tags: 'a.active[href^="#tag-"]',
+      authors: 'a.active[href^="#author-"]',
+    },
   },
   article: {
     tags: '.post-tags .list',
@@ -201,7 +205,7 @@ function tagClickHandler(event) {
   const tag = href.replace('#tag-', '');
   console.log(tag);
   /*  find all tag links with class active */
-  const activeLinksTags = document.querySelectorAll('a.active[href^="#tag-"]');
+  const activeLinksTags = document.querySelectorAll(select.all.linksTo.tags);
   console.log(activeLinksTags);
   /* START LOOP: for each active tag link */
   for (let activeLinksTag of activeLinksTags) {
@@ -307,7 +311,7 @@ function authorClickHandler(event) {
   const author = href.replace('#author-', '');
   console.log(author);
   /* find all author links with class active */
-  const activeAuthorLinks = document.querySelectorAll('a.active[href^="#author-"]');
+  const activeAuthorLinks = document.querySelectorAll(select.all.linksTo.authors);
   console.log(activeAuthorLinks);
   /* START LOOP: for each active tag link */
   for (let activeAuthorLink of activeAuthorLinks) {
