@@ -60,10 +60,14 @@ body {
   background-color: $color-sidebars;
   border: 2px solid $color-border-sidebars;
 }
+.left-sidebar{
+  display: inline;
+}
 
 .posts {
   flex: 4 0 0;
   border: 2px solid $color-posts;
+  overflow: auto;
 }
 
 .posts,
@@ -100,8 +104,29 @@ body {
 
 .list-horizontal {
   li {
-    display: inline-block;
+    display: inline;
   }
+}
+/*Tags*/
+.tags li {
+  display: inline-block;
+  margin: 0 3px;
+}
+.tag-size-5{
+  font-size: 25px;
+  color: green;
+}
+.tag-size-3 {
+  font-size: 20px;
+  color: red;
+}
+.tag-size-2 {
+  font-size: 20px;
+  color: orange;
+}
+.tag-size-1 {
+  font-size: 15px;
+  color: grey;
 }
 /* Authors */
 .authors {
